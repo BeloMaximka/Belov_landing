@@ -1,0 +1,204 @@
+.outlined-button {
+    display: flex;
+    justify-content: center;
+    color: #ff2b2b;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+
+    border: #ff2b2b 2px solid;
+    min-width: 170px;
+    padding: 12px;
+    transition: 200ms;
+}
+
+.outlined-button:hover {
+    cursor: pointer;
+    scale: 0.98;
+    background-color: #00000015;
+}
+
+.paragraph-text {
+    color: #5a5a5a;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.icon {
+    height: 32px;
+    width: 32px;
+    margin-bottom: 8px;
+}
+
+.text-block {
+    width: 220px;
+    margin-bottom: 16px;
+    margin-right: 32px;
+}
+
+.text-block-slider {
+    width: 0px;
+    visibility: collapse;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-block-slider > .paragraph-text {
+    height: 24px;
+}
+
+.features-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media (max-width: 950px) {
+    .text-block {
+        width: 264px;
+    }
+    .features-content {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 660px) {
+    .text-block {
+        height: 0;
+        position: fixed;
+        visibility: collapse;
+        margin: 0;
+    }
+    .text-block-slider {
+        width: 264px;
+        margin-bottom: 16px;
+        visibility: visible;
+    }
+    .text-block-slider > .paragraph-text::after
+    {
+        animation: paragraph-text 20s linear infinite;
+        content: "Management";
+    }
+    .text-block-slider > .normal-text::after
+    {
+        animation: normal-text 20s linear infinite;
+        content: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
+    }
+    .text-block-slider > .icon
+    {
+        animation: icon 20s linear infinite;
+        background-image: url('../assets/cog.svg');
+    }
+}
+
+@keyframes paragraph-text {
+    7.6%,15.3% {
+        opacity: 1;
+        content: "Management";
+    }
+    23% {
+        opacity: 0;
+    }
+    30.7%,38.4% {
+        opacity: 1;
+        content: "UI /UX Design";
+    }
+    46.1% {
+        opacity: 0;
+    }
+    53.8%,61.5% {
+        opacity: 1;
+        content: "Logo / Branding";
+    }
+    69.2% {
+        opacity: 0;
+        
+    }
+    76.9%,84.6% {
+        opacity: 1;
+        content: "Animation";
+    }
+    92.3% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        content: "Management";
+    }
+}
+
+@keyframes normal-text {
+    7.6%,15.3% {
+        opacity: 1;
+        content: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
+    }
+    23% {
+        opacity: 0;
+    }
+    30.7%,38.4% {
+        opacity: 1;
+        content: "2Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
+    }
+    46.1% {
+        opacity: 0;
+    }
+    53.8%,61.5% {
+        opacity: 1;
+        content: "3Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
+    }
+    69.2% {
+        opacity: 0;
+        
+    }
+    76.9%,84.6% {
+        opacity: 1;
+        content: "4Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
+    }
+    92.3% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        content: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
+    }
+}
+
+@keyframes icon {
+    7.6%,15.3% {
+        opacity: 1;
+        background-image: url('../assets/cog.svg');
+    }
+    23% {
+        opacity: 0;
+    }
+    30.7%,38.4% {
+        opacity: 1;
+        background-image: url('../assets/pencil.svg');
+    }
+    46.1% {
+        opacity: 0;
+    }
+    53.8%,61.5% {
+        opacity: 1;
+        background-image: url('../assets/diamond.svg');
+    }
+    69.2% {
+        opacity: 0;
+        
+    }
+    76.9%,84.6% {
+        opacity: 1;
+        background-image: url('../assets/truck.svg');
+    }
+    92.3% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        background-image: url('../assets/cog.svg');
+    }
+}

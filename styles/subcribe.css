@@ -1,0 +1,101 @@
+
+.cover-section {
+    overflow: hidden;
+}
+
+.subscribe-cover {
+    margin: -16px;
+    background-image: url("../assets/wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cover-effects {
+    height: 100%;
+    backdrop-filter: blur(8px) brightness(40%);
+    -webkit-backdrop-filter: blur(8px) brightness(40%);
+}
+
+.subcribe-input {
+    border-radius: 4px;
+    padding: 24px;
+    max-width: 400px;
+    width: 100%;
+    border: none;
+    box-shadow: black 0px 0px 8px;
+    transition: 200ms;
+}
+
+.subcribe-input:hover {
+    scale: 0.98;
+}
+
+.subcribe-input:focus {
+    outline: none;
+    scale: 1.02;
+}
+
+.mw-large {
+    max-width: 600px;
+}
+
+.normal-white-text {
+    font-size: 14px;
+    color: white;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.big-white-text {
+    margin-left: 32px;
+    margin-right: 32px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subcribe-wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: var(--page_width);
+}
+
+.wrap-subscribe
+{
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media (max-width: 950px) {
+    .big-white-text {
+        font-size: 28px;
+    }
+    .wrap-subscribe {
+        padding-left: 32px;
+        padding-right: 48px;
+    }
+}
+
+@media (max-width: 520px) {
+    .big-white-text {
+        font-size: 24px;
+    }
+    .subcribe-wrapper {
+        flex-direction: column;
+    }
+    .subcribe-input {
+        width: auto;
+        max-width: none;
+    }
+}

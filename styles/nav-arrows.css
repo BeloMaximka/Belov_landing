@@ -1,0 +1,36 @@
+.nav-wrapper {
+    z-index: 9998;
+    position: fixed;
+    right: 32px;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.nav-circle {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    box-shadow: black 0px 0px 8px;
+    background-color: #f1edea;
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    transition: 200ms;
+    opacity: 40%;
+}
+
+.nav-icon {
+    display: block;
+}
+.nav-circle:hover {
+    scale: 0.98;
+    opacity: 100%;
+    filter: brightness(0.95);
+}
+
+.nav-circle:active {
+    scale: 0.95;
+}

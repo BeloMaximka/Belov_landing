@@ -1,0 +1,51 @@
+.normal-text {
+    font-size: 14px;
+    opacity: 60%;
+}
+
+.mw-medium {
+    max-width: 400px;
+}
+
+.big-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #545454;
+    width: 370px;
+}
+
+.large-text {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.middle-text {
+    text-align: center;
+}
+
+@media (max-width: 950px) {
+
+    .large-text,
+    .big-text,
+    .normal-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .big-text {
+        font-size: 28px;
+        width: 100vw;
+    }
+    .normal-text {
+        margin-left: 16px;
+        padding-right: 16px;
+    }
+    .large-text {
+        font-size: 32px;
+    }
+}

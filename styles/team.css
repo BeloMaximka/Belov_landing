@@ -1,0 +1,315 @@
+.main-photo {
+    width: 250px;
+    height: 350px;
+    background-color: gray;
+    object-fit: cover;
+    background-image: url('../assets/portrait1.webp');
+    background-size: cover;
+    background-position: center;
+    transition: 200ms;
+}
+
+.main-photo:hover {
+    scale: 1.05;
+}
+
+.profile-links-bar {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    gap: 48px;
+    font-size: 16px;
+}
+
+.link-button {
+    color: #7e7e7e;
+    font-weight: 500;
+    font-style: italic;
+    transition: 200ms;
+    text-decoration: none;
+}
+
+.link-button:hover {
+    color: #a0a0a0;
+    cursor: pointer;
+}
+
+.mini-photo-container {
+    justify-content: space-between;
+    display: flex;
+    flex: 1;
+}
+
+.mini-photo {
+    width: 150px;
+    height: 160px;
+    background-color: gray;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center 20%;
+}
+
+.photo-name {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    position: absolute;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 4px;
+    width: 100%;
+    text-align: center;
+    transition: 200ms;
+    bottom: -30px;
+}
+
+.mini-photo:hover>.photo-name {
+    bottom: 0;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 52px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.team-subcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1;
+    max-width: 675px;
+}
+
+.team-text {
+    max-width: 500px;
+}
+.team-text::after {
+    font-size: 14px;
+    opacity: 60%;
+    
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate earum asperiores provident quam . Ui / Ux, print template";
+}
+
+.semibig-text {
+    margin-bottom: 16px;
+}
+
+.semibig-text::after {
+    font-size: 24px;
+    font-weight: 500;
+    color: #545454;
+    width: 370px;
+    content: "MARK WAUGH";
+}
+
+@media (max-width: 950px) {
+    .team-container {
+        justify-content: center;
+    }
+
+    .team-subcontainer {
+        align-items: center;
+    }
+
+    .semibig-text,
+    .team-text {
+        text-align: center;
+    }
+
+    .profile-links-bar {
+        width: 100%;
+    }
+
+    .mini-photo-container {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 660px) {
+    .mini-photo {
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+
+    .semibig-text::after {
+        content: "MARK WAUGH";
+        animation: semibig-text 25s linear infinite;
+    }
+
+    .main-photo {
+        width: 80vw;
+        height: 112vw;
+        animation: main-photo 25s linear infinite;
+    }
+    .team-text {
+        animation: team-text 25s linear infinite;
+    }
+}
+
+@media (max-width: 520px) {
+    .team-text {
+        padding-left: 32px;
+        padding-right: 32px;
+        max-width: 100vw;
+    }
+    .profile-links-bar
+    {
+        gap: 0;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+}
+
+@keyframes semibig-text {
+
+    6.25%,
+    12.5% {
+        opacity: 1;
+        content: "MARK WAUGH";
+    }
+
+    18.75% {
+        opacity: 0;
+    }
+
+    25%,
+    31.25% {
+        opacity: 1;
+        content: "MARK WAUGH";
+    }
+
+    37.5% {
+        opacity: 0;
+    }
+
+    43.75%,
+    50% {
+        opacity: 1;
+        content: "MARK WAUGH";
+    }
+
+    56.25% {
+        opacity: 0;
+
+    }
+
+    62.5%,
+    68.75% {
+        opacity: 1;
+        content: "MARK WAUGH";
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    81.25%,
+    87.5% {
+        opacity: 1;
+        content: "MARK WAUGH";
+    }
+
+    93.75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        content: "MARK WAUGH";
+    }
+}
+
+@keyframes team-text {
+
+    6.25%,
+    12.5% {
+        opacity: 1;
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate earum asperiores provident quam . Ui / Ux, print template";
+    }
+
+    18.75% {
+        opacity: 0;
+    }
+
+    25%,
+    31.25% {
+        opacity: 1;
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate earum asperiores provident quam . Ui / Ux, print template";
+    }
+
+    37.5% {
+        opacity: 0;
+    }
+
+    43.75%,
+    50% {
+        opacity: 1;
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate earum asperiores provident quam . Ui / Ux, print template";
+    }
+
+    56.25% {
+        opacity: 0;
+
+    }
+
+    62.5%,
+    68.75% {
+        opacity: 1;
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate earum asperiores provident quam . Ui / Ux, print template";
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    81.25%,
+    87.5% {
+        opacity: 1;
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate earum asperiores provident quam . Ui / Ux, print template";
+    }
+
+    93.75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate earum asperiores provident quam . Ui / Ux, print template";
+    }
+}
+
+
+@keyframes main-photo {
+
+    25%,
+    31.25% {
+        background-image: url('../assets/portrait2.jpg');
+    }
+
+    43.75%,
+    50% {
+        background-image: url('../assets/portrait3.jpg');
+    }
+
+    62.5%,
+    68.75% {
+        background-image: url('../assets/portrait4.jpg');
+    }
+
+    81.25%,
+    87.5% {
+        background-image: url('../assets/portrait5.jpg');
+    }
+
+    100% {
+        background-image: url('../assets/portrait1.webp');
+    }
+}
