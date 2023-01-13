@@ -3,8 +3,8 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     color: #ff2b2b;
     font-weight: bold;
     border-radius: 4px;
@@ -41,8 +41,15 @@
     width: 220px;
     margin-bottom: 16px;
     margin-right: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
 }
 
@@ -53,15 +60,15 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
-.text-block-slider > .paragraph-text {
+.text-block-slider>.paragraph-text {
     height: 24px;
 }
 
@@ -71,24 +78,27 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
 }
 
 @media (max-width: 950px) {
     .text-block {
         width: 264px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
+
     .features-content {
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
 
@@ -99,61 +109,75 @@
         visibility: collapse;
         margin: 0;
     }
+
     .text-block-slider {
         width: 264px;
         margin-bottom: 16px;
         visibility: visible;
     }
-    .text-block-slider > .paragraph-text::after
-    {
+
+    .text-block-slider>.paragraph-text::after {
         -webkit-animation: paragraph-text 20s linear infinite;
-                animation: paragraph-text 20s linear infinite;
+        animation: paragraph-text 20s linear infinite;
         content: "Management";
     }
-    .text-block-slider > .normal-text::after
-    {
+
+    .text-block-slider>.normal-text::after {
         -webkit-animation: normal-text 20s linear infinite;
-                animation: normal-text 20s linear infinite;
+        animation: normal-text 20s linear infinite;
         content: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
     }
-    .text-block-slider > .icon
-    {
+
+    .text-block-slider>.icon {
         -webkit-animation: icon 20s linear infinite;
-                animation: icon 20s linear infinite;
+        animation: icon 20s linear infinite;
         background-image: url('../assets/cog.svg');
     }
 }
 
 @-webkit-keyframes paragraph-text {
-    7.6%,15.3% {
+
+    7.6%,
+    15.3% {
         opacity: 1;
         content: "Management";
     }
+
     23% {
         opacity: 0;
     }
-    30.7%,38.4% {
+
+    30.7%,
+    38.4% {
         opacity: 1;
         content: "UI /UX Design";
     }
+
     46.1% {
         opacity: 0;
     }
-    53.8%,61.5% {
+
+    53.8%,
+    61.5% {
         opacity: 1;
         content: "Logo / Branding";
     }
+
     69.2% {
         opacity: 0;
-        
+
     }
-    76.9%,84.6% {
+
+    76.9%,
+    84.6% {
         opacity: 1;
         content: "Animation";
     }
+
     92.3% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         content: "Management";
@@ -161,35 +185,48 @@
 }
 
 @keyframes paragraph-text {
-    7.6%,15.3% {
+
+    7.6%,
+    15.3% {
         opacity: 1;
         content: "Management";
     }
+
     23% {
         opacity: 0;
     }
-    30.7%,38.4% {
+
+    30.7%,
+    38.4% {
         opacity: 1;
         content: "UI /UX Design";
     }
+
     46.1% {
         opacity: 0;
     }
-    53.8%,61.5% {
+
+    53.8%,
+    61.5% {
         opacity: 1;
         content: "Logo / Branding";
     }
+
     69.2% {
         opacity: 0;
-        
+
     }
-    76.9%,84.6% {
+
+    76.9%,
+    84.6% {
         opacity: 1;
         content: "Animation";
     }
+
     92.3% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         content: "Management";
@@ -197,35 +234,48 @@
 }
 
 @-webkit-keyframes normal-text {
-    7.6%,15.3% {
+
+    7.6%,
+    15.3% {
         opacity: 1;
         content: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
     }
+
     23% {
         opacity: 0;
     }
-    30.7%,38.4% {
+
+    30.7%,
+    38.4% {
         opacity: 1;
         content: "2Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
     }
+
     46.1% {
         opacity: 0;
     }
-    53.8%,61.5% {
+
+    53.8%,
+    61.5% {
         opacity: 1;
         content: "3Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
     }
+
     69.2% {
         opacity: 0;
-        
+
     }
-    76.9%,84.6% {
+
+    76.9%,
+    84.6% {
         opacity: 1;
         content: "4Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
     }
+
     92.3% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         content: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
@@ -233,35 +283,48 @@
 }
 
 @keyframes normal-text {
-    7.6%,15.3% {
+
+    7.6%,
+    15.3% {
         opacity: 1;
         content: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
     }
+
     23% {
         opacity: 0;
     }
-    30.7%,38.4% {
+
+    30.7%,
+    38.4% {
         opacity: 1;
         content: "2Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
     }
+
     46.1% {
         opacity: 0;
     }
-    53.8%,61.5% {
+
+    53.8%,
+    61.5% {
         opacity: 1;
         content: "3Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
     }
+
     69.2% {
         opacity: 0;
-        
+
     }
-    76.9%,84.6% {
+
+    76.9%,
+    84.6% {
         opacity: 1;
         content: "4Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
     }
+
     92.3% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         content: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi ad doloribus, nostrum repudiandae, omnis explicabo nesciunt, temporibus.";
@@ -269,35 +332,48 @@
 }
 
 @-webkit-keyframes icon {
-    7.6%,15.3% {
+
+    7.6%,
+    15.3% {
         opacity: 1;
         background-image: url('../assets/cog.svg');
     }
+
     23% {
         opacity: 0;
     }
-    30.7%,38.4% {
+
+    30.7%,
+    38.4% {
         opacity: 1;
         background-image: url('../assets/pencil.svg');
     }
+
     46.1% {
         opacity: 0;
     }
-    53.8%,61.5% {
+
+    53.8%,
+    61.5% {
         opacity: 1;
         background-image: url('../assets/diamond.svg');
     }
+
     69.2% {
         opacity: 0;
-        
+
     }
-    76.9%,84.6% {
+
+    76.9%,
+    84.6% {
         opacity: 1;
         background-image: url('../assets/truck.svg');
     }
+
     92.3% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         background-image: url('../assets/cog.svg');
@@ -305,35 +381,48 @@
 }
 
 @keyframes icon {
-    7.6%,15.3% {
+
+    7.6%,
+    15.3% {
         opacity: 1;
         background-image: url('../assets/cog.svg');
     }
+
     23% {
         opacity: 0;
     }
-    30.7%,38.4% {
+
+    30.7%,
+    38.4% {
         opacity: 1;
         background-image: url('../assets/pencil.svg');
     }
+
     46.1% {
         opacity: 0;
     }
-    53.8%,61.5% {
+
+    53.8%,
+    61.5% {
         opacity: 1;
         background-image: url('../assets/diamond.svg');
     }
+
     69.2% {
         opacity: 0;
-        
+
     }
-    76.9%,84.6% {
+
+    76.9%,
+    84.6% {
         opacity: 1;
         background-image: url('../assets/truck.svg');
     }
+
     92.3% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
         background-image: url('../assets/cog.svg');
