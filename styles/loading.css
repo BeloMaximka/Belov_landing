@@ -5,11 +5,24 @@
     z-index: 9999;
     background-color: #f7f3f0;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 16px;
+
+    -webkit-animation: loading-screen 500ms 3.3s linear forwards;
 
     animation: loading-screen 500ms 3.3s linear forwards;
 }
@@ -31,12 +44,26 @@
     height: 3px;
     width: 0;
     background-color: #545454;
+    -webkit-animation: loading-bar 3s 300ms forwards;
     animation: loading-bar 3s 300ms forwards;
+}
+
+@-webkit-keyframes loading-bar {
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes loading-bar {
     to {
         width: 100%;
+    }
+}
+
+@-webkit-keyframes loading-screen {
+    to {
+        opacity: 0;
+        visibility: collapse;
     }
 }
 

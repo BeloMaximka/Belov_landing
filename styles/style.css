@@ -5,6 +5,10 @@
     cursor: url('../assets/cursor.png') 0 0, auto !important;
 }
 
+::-moz-selection {
+    background: #aaa5a0;
+}
+
 ::selection {
     background: #aaa5a0;
 }
@@ -24,6 +28,7 @@ html {
 
 .video-top {
     max-width: 420px;
+    -webkit-box-shadow: black 0px 0px 16px -2px;
     box-shadow: black 0px 0px 16px -2px;
     overflow: hidden;
 }
@@ -36,22 +41,36 @@ html {
     position: absolute;
     width: 96px;
     height: 96px;
+    -webkit-transition: 200ms;
+    -o-transition: 200ms;
     transition: 200ms;
     opacity: 80%;
 
     left: 50%;
     top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
 
 .play-icon:hover {
+    -webkit-filter: brightness(0.8);
     filter: brightness(0.8);
 }
 
 .middle-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 16px;
 }
@@ -76,6 +95,8 @@ html {
 }
 
 .left {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     margin-left: 0;
 }
@@ -86,8 +107,11 @@ html {
 
 @media (max-width: 950px) {
     .left {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
+
     .small-separator {
         margin-right: 0;
         margin-left: 0;
@@ -98,6 +122,7 @@ html {
     .video-container {
         margin-top: -53px;
     }
+
     .video-top {
         width: 100vw;
         max-width: 100vw;

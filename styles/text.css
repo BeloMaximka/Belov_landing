@@ -41,10 +41,12 @@
         font-size: 28px;
         width: 100vw;
     }
+
     .normal-text {
         margin-left: 16px;
         padding-right: 16px;
     }
+
     .large-text {
         font-size: 32px;
     }
