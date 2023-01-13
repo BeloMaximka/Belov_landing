@@ -41,6 +41,9 @@
     width: 220px;
     margin-bottom: 16px;
     margin-right: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .text-block-slider {
@@ -80,6 +83,7 @@
 @media (max-width: 950px) {
     .text-block {
         width: 264px;
+        align-items: center;
     }
     .features-content {
         -webkit-box-pack: center;
