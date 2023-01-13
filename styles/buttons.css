@@ -18,16 +18,22 @@
     font-weight: bold;
     font-size: 12px;
     padding: 16px;
-    height: calc(100% - 16px);
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
     margin-left: 8px;
     margin-right: 8px;
 
     transition: 200ms;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .menu-button:hover {
     background-color: #ffffff22;
+}
+
+.menu-button:active {
+    background-color: #ff2b2b;
 }
 
 .fill-button {
@@ -65,7 +71,7 @@
     visibility: collapse;
 }
 
-#hamburger:checked + .bar {
+#hamburger:checked+.bar {
     left: 0 !important;
 }
 
@@ -87,8 +93,9 @@
     filter: invert();
 }
 
-.hamburger-button:hover, .chevron-left:hover {
-    filter:  invert() brightness(0.8);
+.hamburger-button:hover,
+.chevron-left:hover {
+    filter: invert() brightness(0.8);
 }
 
 @media (max-width: 660px) {
@@ -102,17 +109,26 @@
         left: -100px;
         transition: 500ms;
     }
+
     .mobile-bar {
         height: 70px;
         visibility: visible;
         padding: 8px;
     }
+
     .chevron-left {
         visibility: visible;
     }
+
     .menu-button {
         height: auto;
         margin: 0;
-        width: 69%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 16px;
+        margin-right: 16px;
+        width: 100%;
     }
 }
