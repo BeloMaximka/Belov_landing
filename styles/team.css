@@ -185,7 +185,7 @@
     }
 
     .main-photo {
-        width: 80vw;
+        width: calc(100vw - 96px);
         height: 112vw;
         -webkit-animation: main-photo 25s linear infinite;
         animation: main-photo 25s linear infinite;

@@ -101,9 +101,9 @@
 
     .product-image-slider {
         position: relative;
-        width: 100%;
+        width: calc(100vw - 96px);
         height: 0;
-        padding-bottom: 100%;
+        padding-bottom: calc(100vw - 96px);
         background-position: center;
         background-image: url('../assets/product1.jpg');
         background-size: cover;

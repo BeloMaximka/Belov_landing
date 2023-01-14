@@ -105,6 +105,10 @@ html {
     padding-top: 0 !important;
 }
 
+.dissapear {
+    position: fixed;
+}
+
 @media (max-width: 950px) {
     .left {
         -webkit-box-align: center;
@@ -121,6 +125,10 @@ html {
 @media (max-width: 660px) {
     .video-container {
         margin-top: -53px;
+    }
+
+    .dissapear {
+        position: relative;
     }
 
     .video-top {

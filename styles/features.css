@@ -111,7 +111,8 @@
     }
 
     .text-block-slider {
-        width: 264px;
+        width: calc(100vw - 96px);
+        max-width: 264px;
         margin-bottom: 16px;
         visibility: visible;
     }
