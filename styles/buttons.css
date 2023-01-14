@@ -39,11 +39,10 @@
     margin-left: 8px;
     margin-right: 8px;
 
-    -webkit-transition: 200ms;
+    -webkit-transition: background-color 200ms;
+    -o-transition: background-color 200ms;
+    transition: background-color 200ms;
 
-    -o-transition: 200ms;
-
-    transition: 200ms;
     cursor: pointer;
 }
 
@@ -144,6 +143,9 @@
     width: 0;
     height: 0;
     opacity: 40%;
+    -webkit-transition: opacity 200ms;
+    -o-transition: opacity 200ms;
+    transition: opacity 200ms;
 }
 
 .right-arrow {
@@ -160,9 +162,7 @@
         position: relative;
         width: 32px;
         height: 32px;
-        -webkit-transition: 200ms;
-        -o-transition: 200ms;
-        transition: 200ms;
+
     }
 
     .bar {
@@ -178,9 +178,9 @@
         justify-content: flex-start;
         top: 0;
         left: -100px;
-        -webkit-transition: 500ms;
-        -o-transition: 500ms;
-        transition: 500ms;
+        -webkit-transition: left 500ms;
+        -o-transition: left 500ms;
+        transition: left 500ms;
     }
 
     .hamburger-button {

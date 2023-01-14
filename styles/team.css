@@ -7,9 +7,9 @@
     background-image: url('../assets/portrait1.webp');
     background-size: cover;
     background-position: center;
-    -webkit-transition: 200ms;
-    -o-transition: 200ms;
-    transition: 200ms;
+    -webkit-transition: scale 200ms;
+    -o-transition: scale 200ms;
+    transition: scale 200ms;
 }
 
 .main-photo:hover {

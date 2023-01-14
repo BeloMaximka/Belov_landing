@@ -13,9 +13,9 @@
 .product-image {
     width: 230px;
     height: 230px;
-    -webkit-transition: 200ms;
-    -o-transition: 200ms;
-    transition: 200ms;
+    -webkit-transition: scale 200ms;
+    -o-transition: scale 200ms;
+    transition: scale 200ms;
     -o-object-fit: cover;
     object-fit: cover;
 }
@@ -25,9 +25,9 @@
 }
 
 .product-image-slider {
-    -webkit-transition: 200ms;
-    -o-transition: 200ms;
-    transition: 200ms;
+    -webkit-transition: scale 200ms;
+    -o-transition: scale 200ms;
+    transition: scale 200ms;
     -o-object-fit: cover;
     object-fit: cover;
     position: fixed;
